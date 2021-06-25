@@ -4,6 +4,7 @@
   "description": "ESLint, Prettier, and Husky configuration for the TypeScript projects that I use.",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier:watch": "npx onchange '(src|tests)/**/*.ts' -- prettier --write {{changed}}",
     "prettier:format": "npx prettier '(src|tests)/**/*.ts' --write",
@@ -12,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm build && npm run format && npm test"
+      "pre-commit": "npm build && npm run format && npm test"
     }
   },
   "repository": {
