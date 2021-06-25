@@ -12,12 +12,6 @@
     "eslint:format": "npx eslint --fix '{src,tests}/**/*.ts'",
     "format": "npm run prettier:format && npm run eslint:format"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npx lint-staged",
-      "pre-push": "npm test"
-    }
-  },
   "lint-staged": {
     "*.ts": [
       "npm build",
