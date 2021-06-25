@@ -1,0 +1,3 @@
+"hooks": {
+  "pre-push": "npm build && npm run format && npm test"
+}
