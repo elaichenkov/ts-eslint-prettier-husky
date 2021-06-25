@@ -10,6 +10,11 @@
     "eslint:format": "npx eslint --fix '{src,tests}/**/*.ts'",
     "format": "npm run prettier:format && npm run eslint:format"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm build && npm run format && npm test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/elaichenkov/ts-eslint-prettier-husky.git"
