@@ -14,12 +14,16 @@
   },
   "husky": {
     "hooks": {
-        "pre-commit": "lint-staged",
-        "pre-push": "npm test"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
     }
   },
   "lint-staged": {
-    "*.ts": ["npm build", "npm run format", "git add"]
+    "*.ts": [
+      "npm build",
+      "npm run format",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
